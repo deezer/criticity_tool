@@ -1,0 +1,15 @@
+.trivial {
+    color: green;
+}
+.minor {
+    color: darkolivegreen;
+}
+.major {
+    color: orange;
+}
+.critical {
+    color: orangered;
+}
+.blocker {
+    color: red;
+}

@@ -1,0 +1,22 @@
+dataPriorities = {
+    "1": {
+        "value": "1",
+        "message": "trivial"
+    },
+    "2": {
+        "value": "2",
+        "message": "minor"
+    },
+    "3": {
+        "value": "3",
+        "message": "major"
+    },
+    "4": {
+        "value": "4",
+        "message": "critical"
+    },
+    "5": {
+        "value": "5",
+        "message": "blocker"
+    }
+}
