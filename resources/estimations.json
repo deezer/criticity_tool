@@ -1,0 +1,140 @@
+dataEstimations = {
+    "types": {
+        "description": "Type",
+        "status":"mandatory",
+        "data": [
+            {
+                "message": "Mise en péril de l'infrastructure applicative",
+                "value": 5
+            },
+            {
+                "message": "Impacte les travaux d'un employé",
+                "value":5
+            },
+            {
+                "message": "Représente une perte financière immédiate",
+                "value": 4
+            },
+            {
+                "message": "Impacte toute une catégorie de contenu spécifique",
+                "value": 4
+            },
+            {
+                "message": "Impacte l'utilisation d'un main feature (Flow, Stream, Download, Search, Ajout aux favs, Onboarding, Login/register, Contenu mis en avant)",
+                "value": 4
+            },
+            {
+                "message": "Impacte la UX/UI",
+                "value": 3
+            },
+            {
+                "message": " N'a pas d'impact sur les utilisateurs ni sur les employés",
+                "value": 2
+            },
+            {
+                "message": "Aucun des critères précédents",
+                "value": 3,
+                "selected" : true
+            }
+        ]
+    },
+    "frequency": {
+        "description": "Fréquence de reproduction",
+        "status":"mandatory",
+        "data": [
+            {
+                "message": "Moins de 1% de chances de reproduire le problème",
+                "value": -2
+            },
+            {
+                "message": "De 1% à 20% de chances de reproduire le problème",
+                "value": -1
+            },
+            {
+                "message": "Plus de 20% de chances de reproduire le problème",
+                "value": 0
+            },
+            {
+                "message": "Ne s'applique pas",
+                "value": 0,
+                "selected" : true
+            }
+        ]
+    },
+    "user_impacted": {
+        "description": "Nombre d'utilisateurs touchés sur la plateforme concernée",
+        "status":"mandatory",
+        "data": [
+            {
+                "message": "Moins de 0,1% d'utilisateurs touchés",
+                "value": -2,
+                "selected" : true
+            },
+            {
+                "message": "De 0,1 à 5% d'utilisateurs touchés",
+                "value": -1
+            },
+            {
+                "message": "Plus de 5% d'utilisateurs touchés",
+                "value": 0
+            },
+            {
+                "message": "Tous les new regs",
+                "value": 0
+            }
+        ]
+    },
+    "blocker_level": {
+        "description": "Niveau de blocage",
+        "status":"mandatory",
+        "data": [
+            {
+                "message": "Crash/Freeze complet de l'application",
+                "value": 2
+            },
+            {
+                "message": "L'utilisateur n'a aucune solution pour réaliser l'action souhaitée",
+                "value": 1
+            },
+            {
+                "message": "Il existe une solution de contournement",
+                "value": 0
+            },
+            {
+                "message": "Non bloquant",
+                "value": -1,
+                "selected" : true
+            }
+        ]
+    },
+    "complexity": {
+        "description": "Complexité",
+        "status":"optional",
+        "data": [
+            {
+                "message": "Le bug ne se produit que lors d'une utilisation plus complexe que la normale",
+                "value": -1
+            }
+        ]
+    },
+    "minor_content": {
+        "description": "Impact sur le contenu",
+        "status":"optional",
+        "data": [
+            {
+                "message": "Le bug ne touche qu'un contenu mineur (podcasts, audiobooks, livestreams)",
+                "value": -1
+            }
+        ]
+    },
+    "top_partner": {
+        "description": "Partnaire(s) important impliqués",
+        "status":"optional",
+        "data": [
+            {
+                "message": "Le bug concerne un des top partners Platform",
+                "value": 1
+            }
+        ]
+    }
+};

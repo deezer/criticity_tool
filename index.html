@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Bug meter</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!-- jquery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">        
+        <!-- Bootstrasp-select -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.3/css/bootstrap-select.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.3/js/bootstrap-select.min.js"></script>
+        <!-- Project -->
+        <link rel="stylesheet" href="styles/priorities.css">
+        <link rel="stylesheet" href="styles/tool.css">
+        <script type="text/javascript" src="resources/estimations.json"></script>
+        <script type="text/javascript" src="resources/priorities.json"></script>
+        <script type="text/javascript" src="js/tool/estimator.js"></script>
+        <script type="text/javascript" src="js/data/renderer.js"></script>
+        <script type="text/javascript" src="js/bugmeter.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <h1 class="heading-1" title="Estiamtion is given on the fly.">Bug Meter</h1>
+            </div>
+            <div class="row">
+                <form id="bug-selectors" class="form-horizontal">
+                    <div class="form-inline">
+                        <span class="result col-sm-3"><b>Priorité induite</b></span>
+                        <span class="col-sm-9"><h3 id="bug-priority"></h3></span>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-default">
+                    <a id="report-jira" href="https://deezer.jira.com" target="_blank">Reporter un bug</a>
+                </button>
+            </div>
+        </div>
+        <script>
+            var main = new BugMeter();
+            main.launch();
+        </script>
+    </body>
+</html>
