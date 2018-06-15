@@ -1,4 +1,4 @@
-dataEstimations = {
+{
     "types": {
         "description": "Type",
         "status":"mandatory",
@@ -137,4 +137,4 @@ dataEstimations = {
             }
         ]
     }
-};
+}

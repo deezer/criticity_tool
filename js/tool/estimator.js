@@ -1,7 +1,8 @@
 "use strict";
 
 class Estimator {
-    constructor() {
+
+    setPriorities(dataPriorities) {
         this.priorities = dataPriorities;
     }
 
@@ -9,22 +10,22 @@ class Estimator {
      * Estimate the value.
      */
     estimate() {
-        var selects = this.collectionToArray(document.getElementsByTagName('select'));
-        var estimation = 0;
+        let selects = this.collectionToArray(document.getElementsByTagName('select'));
+        let estimation = 0;
         selects.forEach(
             select => {
                 estimation += parseInt(select.value);
             }
         );
         if (estimation <= 0) estimation = 1;
-        else if (estimation >= Object.keys(dataPriorities).length) estimation = Object.keys(dataPriorities).length;
-        estimation = dataPriorities[estimation];
+        else if (estimation >= Object.keys(this.priorities).length) estimation = Object.keys(this.priorities).length;
+        estimation = this.priorities[estimation];
         this.displayEstiamtion(estimation);
     }
 
     /**
      * Show estimation.
-     * @param data: {*} Data estimated.
+     * @param {Object} data Data estimated.
      */
     displayEstiamtion(data) {
         $('#bug-priority').removeClass();
@@ -34,7 +35,7 @@ class Estimator {
 
     /**
      * Convert a HTMLCollection to an array.
-     * @param htmlCollection: HTMLCollection Collection to convert.
+     * @param {HTMLCollection} htmlCollection Collection to convert.
      */
     collectionToArray(htmlCollection) {
         return [].slice.call(htmlCollection);
@@ -42,7 +43,7 @@ class Estimator {
 
     /**
      * Capitalize First letter of a sentence or word.
-     * @param sentence: string Sentence or Word.
+     * @param {String} sentence Sentence or Word.
      */
     capitalizeFirstLetter(sentence) {
         return sentence.charAt(0).toUpperCase() + sentence.slice(1);
