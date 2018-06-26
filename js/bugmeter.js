@@ -57,7 +57,7 @@ class BugMeter {
      */
     onAppReady(e) {
         let that = e.detail;
-        that.renderer.render();
+        that.renderer.render((new URL(document.location)).searchParams);
         that.estimator.estimate();
     }
 
@@ -96,5 +96,35 @@ class BugMeter {
                 }
         };
         xobj.send(null);
+    }
+
+    /**
+     * Generate an exportable link.
+     */
+    exportLink() {
+        let values = this.renderer.getValues();
+        let url = this.formatUrl(values);
+        navigator.clipboard.writeText(url).then(
+            () => {
+                console.log('Async: Copying to clipboard was successful!');
+            },
+            (err) => {
+                console.error('Async: Could not copy text: ', err);
+            }
+        )
+    }
+
+    /**
+     * Format URL.
+     * @param {Object} values Selected values.
+     */
+    formatUrl(values) {
+        let url = document.location.toString().split("?")[0];
+        let params = [];
+        Object.keys(values).forEach(key => {
+            params.push(key + "=" + values[key]);
+        });
+        url += "?" + params.join("&");
+        return url;
     }
 }
