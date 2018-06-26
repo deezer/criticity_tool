@@ -13,8 +13,7 @@ class Renderer {
     render(parameters) {
         let keys = Object.keys(this.estimations);
         for (let i = keys.length -1; i > -1; i --) {
-            let key = keys[i];
-            this.feedSelector(key, this.estimations[key], this.extractParam(parameters, key));
+            this.feedSelector(keys[i], this.estimations[keys[i]], this.extractParam(parameters, keys[i]));
         }
     }
 
@@ -37,7 +36,7 @@ class Renderer {
      */
     feedSelector(key, data, paramKey) {
         let options = [];
-        let selected = '';
+        let selected = false;
         // This snippet is used to detect an unknown parameter.
         let keyMatch = false;
         data.data.forEach(
@@ -62,7 +61,7 @@ class Renderer {
                 }
             }
         );
-        if (data.status == "optional") options.push('<option key="0" value="0"' + (!selected ? ' selected="selected" ' : '') + '>Rien à signaler</option>');
+        if (data.status == "optional") options.push('<option key="default_key" value="0"' + (!selected ? ' selected="selected" ' : '') + '>Rien à signaler</option>');
         let html = '<div class="form-group">' +
             '<div class="form-inline">' +
                 '<label for="bug-' + key + '" ' + (data.status == "mandatory" ? 'title="Mandatory parameter"' : '') + ' class="control-label col-sm-3 ' + data.status + '">' + data.description + ':</label>' +
