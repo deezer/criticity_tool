@@ -4,34 +4,42 @@
         "status":"mandatory",
         "data": [
             {
+                "key": "app_infra_endangered",
                 "message": "Mise en péril de l'infrastructure applicative",
                 "value": 5
             },
             {
+                "key": "employee_impact",
                 "message": "Impacte les travaux d'un employé",
                 "value":5
             },
             {
+                "key": "financial_loss",
                 "message": "Représente une perte financière immédiate",
                 "value": 4
             },
             {
+                "key": "content_impact",
                 "message": "Impacte toute une catégorie de contenu spécifique",
                 "value": 4
             },
             {
+                "key": "feature_impact",
                 "message": "Impacte l'utilisation d'un main feature (Flow, Stream, Download, Search, Ajout aux favs, Onboarding, Login/register, Contenu mis en avant)",
                 "value": 4
             },
             {
+                "key": "ui",
                 "message": "Impacte la UX/UI",
                 "value": 3
             },
             {
+                "key": "user_employee_safe",
                 "message": " N'a pas d'impact sur les utilisateurs ni sur les employés",
                 "value": 2
             },
             {
+                "key": "none",
                 "message": "Aucun des critères précédents",
                 "value": 3,
                 "selected" : true
@@ -43,18 +51,22 @@
         "status":"mandatory",
         "data": [
             {
+                "key": "less_one",
                 "message": "Moins de 1% de chances de reproduire le problème",
                 "value": -2
             },
             {
+                "key": "one_to_twenty",
                 "message": "De 1% à 20% de chances de reproduire le problème",
                 "value": -1
             },
             {
+                "key": "more_twenty",
                 "message": "Plus de 20% de chances de reproduire le problème",
                 "value": 0
             },
             {
+                "key": "none",
                 "message": "Ne s'applique pas",
                 "value": 0,
                 "selected" : true
@@ -66,19 +78,23 @@
         "status":"mandatory",
         "data": [
             {
+                "key": "less_o_one",
                 "message": "Moins de 0,1% d'utilisateurs touchés",
                 "value": -2,
                 "selected" : true
             },
             {
+                "key": "o_one_to_o_five",
                 "message": "De 0,1 à 5% d'utilisateurs touchés",
                 "value": -1
             },
             {
+                "key": "more_o_five",
                 "message": "Plus de 5% d'utilisateurs touchés",
                 "value": 0
             },
             {
+                "key": "all_regs",
                 "message": "Tous les new regs",
                 "value": 0
             }
@@ -89,18 +105,22 @@
         "status":"mandatory",
         "data": [
             {
+                "key": "crash_freeze",
                 "message": "Crash/Freeze complet de l'application",
                 "value": 2
             },
             {
+                "key": "action_stuck",
                 "message": "L'utilisateur n'a aucune solution pour réaliser l'action souhaitée",
                 "value": 1
             },
             {
+                "key": "workaround",
                 "message": "Il existe une solution de contournement",
                 "value": 0
             },
             {
+                "key": "no_block",
                 "message": "Non bloquant",
                 "value": -1,
                 "selected" : true
@@ -112,6 +132,7 @@
         "status":"optional",
         "data": [
             {
+                "key": "complex_usage",
                 "message": "Le bug ne se produit que lors d'une utilisation plus complexe que la normale",
                 "value": -1
             }
@@ -122,6 +143,7 @@
         "status":"optional",
         "data": [
             {
+                "key": "minor_content",
                 "message": "Le bug ne touche qu'un contenu mineur (podcasts, audiobooks, livestreams)",
                 "value": -1
             }
@@ -132,6 +154,7 @@
         "status":"optional",
         "data": [
             {
+                "key": "top_partner",
                 "message": "Le bug concerne un des top partners Platform",
                 "value": 1
             }

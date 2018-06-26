@@ -32,10 +32,13 @@
                 <button type="button" class="btn btn-default">
                     <a id="report-jira" href="https://deezer.jira.com" target="_blank">Reporter un bug</a>
                 </button>
+                <button type="button" class="btn btn-default" onclick="main.exportLink();">
+                    <span id="criticity-link">Exporter le lien</span>
+                </button>
             </div>
         </div>
         <script>
-            let main = new BugMeter();
+            var main = new BugMeter();
             main.launch();
         </script>
     </body>
