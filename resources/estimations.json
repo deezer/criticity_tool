@@ -1,161 +1,161 @@
 {
     "types": {
-        "description": "Type",
+        "description": "Scope",
         "status":"mandatory",
         "data": [
             {
-                "key": "app_infra_endangered",
-                "message": "Mise en péril de l'infrastructure applicative",
-                "value": 5
+                "key": "user_employee_safe",
+                "message": "No impact on users or employees",
+                "value": 2
             },
             {
                 "key": "employee_impact",
-                "message": "Impacte les travaux d'un employé",
+                "message": "Impact on employee workflow",
                 "value":5
             },
             {
-                "key": "financial_loss",
-                "message": "Représente une perte financière immédiate",
-                "value": 4
+                "key": "ui",
+                "message": "Impact on UI and / or UX",
+                "value": 3
             },
             {
                 "key": "content_impact",
-                "message": "Impacte toute une catégorie de contenu spécifique",
+                "message": "Impact on an entire category of content (ex : all Albums, or all Playlists, etc)",
                 "value": 4
             },
             {
                 "key": "feature_impact",
-                "message": "Impacte l'utilisation d'un main feature (Flow, Stream, Download, Search, Ajout aux favs, Onboarding, Login/register, Contenu mis en avant)",
+                "message": "Impact the use of a main feature (Flow, Streaming, Download, Search, Add to Favorites, Onboarding, Login / Register, Curated content)",
                 "value": 4
             },
             {
-                "key": "ui",
-                "message": "Impacte la UX/UI",
-                "value": 3
+                "key": "financial_loss",
+                "message": "Is an immediate financial loss for the company",
+                "value": 4
             },
             {
-                "key": "user_employee_safe",
-                "message": " N'a pas d'impact sur les utilisateurs ni sur les employés",
-                "value": 2
+                "key": "app_infra_endangered",
+                "message": "Threatens the applicative architecture",
+                "value": 5
             },
             {
                 "key": "none",
-                "message": "Aucun des critères précédents",
+                "message": "None of the previously mentioned criteria",
                 "value": 3,
                 "selected" : true
             }
         ]
     },
     "frequency": {
-        "description": "Fréquence de reproduction",
+        "description": "Frequency",
         "status":"mandatory",
         "data": [
             {
+                "key": "none",
+                "message": "Doesn't apply",
+                "value": 0,
+                "selected" : true
+            },
+            {
                 "key": "less_one",
-                "message": "Moins de 1% de chances de reproduire le problème",
+                "message": "Less than 1% chance of reproducing the issue",
                 "value": -2
             },
             {
                 "key": "one_to_twenty",
-                "message": "De 1% à 20% de chances de reproduire le problème",
+                "message": "From 1% to 20% chance of reproducing the issue",
                 "value": -1
             },
             {
                 "key": "more_twenty",
-                "message": "Plus de 20% de chances de reproduire le problème",
+                "message": "More than 20% chance of reproducing the issue",
                 "value": 0
-            },
-            {
-                "key": "none",
-                "message": "Ne s'applique pas",
-                "value": 0,
-                "selected" : true
             }
         ]
     },
     "user_impacted": {
-        "description": "Nombre d'utilisateurs touchés sur la plateforme concernée",
+        "description": "Number of users impacted",
         "status":"mandatory",
         "data": [
             {
                 "key": "less_o_one",
-                "message": "Moins de 0,1% d'utilisateurs touchés",
+                "message": "Less than 0.1% of impacted users",
                 "value": -2,
                 "selected" : true
             },
             {
                 "key": "o_one_to_o_five",
-                "message": "De 0,1 à 5% d'utilisateurs touchés",
+                "message": "From 0.1% to 5% of impacted users",
                 "value": -1
             },
             {
                 "key": "more_o_five",
-                "message": "Plus de 5% d'utilisateurs touchés",
+                "message": "More than 5% of impacted users",
                 "value": 0
             },
             {
                 "key": "all_regs",
-                "message": "Tous les new regs",
+                "message": "All new registered users",
                 "value": 0
             }
         ]
     },
     "blocker_level": {
-        "description": "Niveau de blocage",
+        "description": "Blocking level",
         "status":"mandatory",
         "data": [
             {
-                "key": "crash_freeze",
-                "message": "Crash/Freeze complet de l'application",
-                "value": 2
-            },
-            {
-                "key": "action_stuck",
-                "message": "L'utilisateur n'a aucune solution pour réaliser l'action souhaitée",
-                "value": 1
+                "key": "no_block",
+                "message": "Not blocker",
+                "value": -1,
+                "selected" : true
             },
             {
                 "key": "workaround",
-                "message": "Il existe une solution de contournement",
+                "message": "A workaround exists",
                 "value": 0
             },
             {
-                "key": "no_block",
-                "message": "Non bloquant",
-                "value": -1,
-                "selected" : true
+                "key": "action_stuck",
+                "message": "No workaround exists : the user cannot do the intended action",
+                "value": 1
+            },
+            {
+                "key": "crash_freeze",
+                "message": "Crash / Freeze of the application",
+                "value": 2
             }
         ]
     },
     "complexity": {
-        "description": "Complexité",
+        "description": "Complexity",
         "status":"optional",
         "data": [
             {
                 "key": "complex_usage",
-                "message": "Le bug ne se produit que lors d'une utilisation plus complexe que la normale",
+                "message": "The issue only happens with complex steps, or a complicated use of the application",
                 "value": -1
             }
         ]
     },
     "minor_content": {
-        "description": "Impact sur le contenu",
+        "description": "Minor content impacted",
         "status":"optional",
         "data": [
             {
                 "key": "minor_content",
-                "message": "Le bug ne touche qu'un contenu mineur (podcasts, audiobooks, livestreams)",
+                "message": "The issue only impacts minor content (Podcasts, Audiobooks, Livestreams)",
                 "value": -1
             }
         ]
     },
     "top_partner": {
-        "description": "Partnaire(s) important impliqués",
+        "description": "Deezer Partners impacted",
         "status":"optional",
         "data": [
             {
                 "key": "top_partner",
-                "message": "Le bug concerne un des top partners Platform",
+                "message": "The issue impacts one of Deezer top Partners",
                 "value": 1
             }
         ]

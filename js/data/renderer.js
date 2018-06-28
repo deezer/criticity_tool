@@ -61,7 +61,7 @@ class Renderer {
                 }
             }
         );
-        if (data.status == "optional") options.push('<option key="default_key" value="0"' + (!selected ? ' selected="selected" ' : '') + '>Rien à signaler</option>');
+        if (data.status == "optional") options.push('<option key="default_key" value="0"' + (!selected ? ' selected="selected" ' : '') + '>Nothing to report</option>');
         let html = '<div class="form-group">' +
             '<div class="form-inline">' +
                 '<label for="bug-' + key + '" ' + (data.status == "mandatory" ? 'title="Mandatory parameter"' : '') + ' class="control-label col-sm-3 ' + data.status + '">' + data.description + ':</label>' +
