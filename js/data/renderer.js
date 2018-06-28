@@ -65,7 +65,7 @@ class Renderer {
         let html = '<div class="form-group">' +
             '<div class="form-inline">' +
                 '<label for="bug-' + key + '" ' + (data.status == "mandatory" ? 'title="Mandatory parameter"' : '') + ' class="control-label col-sm-3 ' + data.status + '">' + data.description + ':</label>' +
-                '<select id="bug-' + key + '" class="form-control" onchange="main.update();" for="bug-selectors" class="col-sm-9">' + options.join('') + '</select>' +
+                '<select id="bug-' + key + '" onchange="main.update();" for="bug-selectors" class="col-sm-9 form-control">' + options.join('') + '</select>' +
             '</div>' +
         '</div>';
         $('#bug-selectors').prepend(html);

@@ -2,5 +2,8 @@
     color: orange;
 }
 .result {
-    color:red
+    color:red;
+}
+.url-link {
+    width: 100%;
 }
