@@ -4,9 +4,9 @@
         "status":"mandatory",
         "data": [
             {
-                "key": "app_infra_endangered",
-                "message": "Threatens the applicative architecture",
-                "value": 5
+                "key": "user_employee_safe",
+                "message": "No impact on users or employees",
+                "value": 2
             },
             {
                 "key": "employee_impact",
@@ -14,9 +14,9 @@
                 "value":5
             },
             {
-                "key": "financial_loss",
-                "message": "Is an immediate financial loss for the company",
-                "value": 4
+                "key": "ui",
+                "message": "Impact on UI and / or UX",
+                "value": 3
             },
             {
                 "key": "content_impact",
@@ -29,14 +29,14 @@
                 "value": 4
             },
             {
-                "key": "ui",
-                "message": "Impact on UI and / or UX",
-                "value": 3
+                "key": "financial_loss",
+                "message": "Is an immediate financial loss for the company",
+                "value": 4
             },
             {
-                "key": "user_employee_safe",
-                "message": "No impact on users or employees",
-                "value": 2
+                "key": "app_infra_endangered",
+                "message": "Threatens the applicative architecture",
+                "value": 5
             },
             {
                 "key": "none",
@@ -51,6 +51,12 @@
         "status":"mandatory",
         "data": [
             {
+                "key": "none",
+                "message": "Doesn't apply",
+                "value": 0,
+                "selected" : true
+            },
+            {
                 "key": "less_one",
                 "message": "Less than 1% chance of reproducing the issue",
                 "value": -2
@@ -64,12 +70,6 @@
                 "key": "more_twenty",
                 "message": "More than 20% chance of reproducing the issue",
                 "value": 0
-            },
-            {
-                "key": "none",
-                "message": "Doesn't apply",
-                "value": 0,
-                "selected" : true
             }
         ]
     },
@@ -105,14 +105,10 @@
         "status":"mandatory",
         "data": [
             {
-                "key": "crash_freeze",
-                "message": "Crash / Freeze of the application",
-                "value": 2
-            },
-            {
-                "key": "action_stuck",
-                "message": "No workaround exists : the user cannot do the intended action",
-                "value": 1
+                "key": "no_block",
+                "message": "Not blocker",
+                "value": -1,
+                "selected" : true
             },
             {
                 "key": "workaround",
@@ -120,10 +116,14 @@
                 "value": 0
             },
             {
-                "key": "no_block",
-                "message": "Not blocker",
-                "value": -1,
-                "selected" : true
+                "key": "action_stuck",
+                "message": "No workaround exists : the user cannot do the intended action",
+                "value": 1
+            },
+            {
+                "key": "crash_freeze",
+                "message": "Crash / Freeze of the application",
+                "value": 2
             }
         ]
     },
