@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Bug meter</title>
@@ -20,20 +21,20 @@
     <body>
         <div class="container">
             <div class="row">
-                <h1 class="heading-1" title="Estiamtion is given on the fly.">Bug Meter</h1>
+                <h1 class="heading-1" title="Estimation on the fly.">Bug Meter</h1>
             </div>
             <div class="row">
                 <form id="bug-selectors" class="form-horizontal">
                     <div class="form-inline">
-                        <span class="result col-sm-3"><b>Priorité induite</b></span>
+                        <span class="result col-sm-3"><b>Priority induced</b></span>
                         <span class="col-sm-9"><h3 id="bug-priority"></h3></span>
                     </div>
                 </form>
                 <button type="button" class="btn btn-default">
-                    <a id="report-jira" href="https://deezer.jira.com" target="_blank">Reporter un bug</a>
+                    <a id="report-jira" href="https://deezer.jira.com/servicedesk/customer/portal/7/create/91" target="_blank">Report a bug</a>
                 </button>
                 <button type="button" class="btn btn-default" onclick="main.exportLink();">
-                    <span id="criticity-link">Exporter le lien</span>
+                    <span id="criticity-link">Copy Bug Meter link to clipboard</span>
                 </button>
             </div>
         </div>
