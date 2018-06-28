@@ -59,6 +59,7 @@ class BugMeter {
         let that = e.detail;
         that.renderer.render((new URL(document.location)).searchParams);
         that.estimator.estimate();
+        that.updateLink();
     }
 
     /**
@@ -99,24 +100,66 @@ class BugMeter {
     }
 
     /**
+     * Update data on select change.
+     */
+    update() {
+        this.updateLink();
+        this.estimator.estimate();
+    }
+
+    /**
+     * Generate url link.
+     * @returns {String} URL link.
+     */
+    generateLink() {
+        return this.formatUrl(this.renderer.getValues());
+    }
+
+    /**
      * Generate an exportable link.
      */
     exportLink() {
-        let values = this.renderer.getValues();
-        let url = this.formatUrl(values);
-        navigator.clipboard.writeText(url).then(
-            () => {
-                console.log('Async: Copying to clipboard was successful!');
-            },
-            (err) => {
-                console.error('Async: Could not copy text: ', err);
-            }
-        )
+        let url = this.generateLink();
+        try {
+            navigator.clipboard.writeText(url).then(
+                () => {
+                    console.log('Copying to clipboard was successful!');
+                },
+                (err) => {
+                    console.error('Could not copy text: ', err);
+                }
+            );
+        } catch (error) {
+            console.error("Something went wrong with the experimental functions", error);
+            this.exportLinkFromField();
+        }
+    }
+
+    /**
+     * Generate an exportable link from field (alternate method).
+     */
+    exportLinkFromField() {
+        this.updateLink();
+        console.log("Copying to clipboard with the old fashion way...");
+        let link = document.getElementById("link-generated");
+        link.disabled = false;
+        link.select();
+        document.execCommand("copy");
+        console.log('Copying to clipboard was successful!');
+        link.disabled = true;
+    }
+
+    /**
+     * Update link input value.
+     */
+    updateLink() {
+        document.getElementById("link-generated").value = this.generateLink();
     }
 
     /**
      * Format URL.
      * @param {Object} values Selected values.
+     * @returns {String} URL formatted.
      */
     formatUrl(values) {
         let url = document.location.toString().split("?")[0];
