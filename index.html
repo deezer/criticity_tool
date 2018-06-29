@@ -25,17 +25,26 @@
             </div>
             <div class="row">
                 <form id="bug-selectors" class="form-horizontal">
-                    <div class="form-inline">
-                        <span class="result col-sm-3"><b>Priority induced</b></span>
-                        <span class="col-sm-9"><h3 id="bug-priority"></h3></span>
+                    <div class="form-group">
+                        <div class="form-inline">
+                            <label for="bug-priority" class="result control-label col-sm-3"><b>Priority induced</b></label>
+                            <h3 id="bug-priority" class="col-sm-9 align-top"></h3>
+                        </div>
                     </div>
                 </form>
-                <button type="button" class="btn btn-default">
-                    <a id="report-jira" href="https://deezer.jira.com/servicedesk/customer/portal/7/create/91" target="_blank">Report a bug</a>
-                </button>
-                <button type="button" class="btn btn-default" onclick="main.exportLink();">
-                    <span id="criticity-link">Copy Bug Meter link to clipboard</span>
-                </button>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <button type="button" class="btn btn-default">
+                        <a id="report-jira" href="https://deezer.jira.com/servicedesk/customer/portal/7/create/91" target="_blank">Report a bug</a>
+                    </button>
+                </div>
+                <div class="col-sm-9">
+                    <button type="button" class="btn btn-default" onclick="main.exportLink();">
+                        <span id="criticity-link">Copy Bug Meter link to clipboard</span>
+                    </button>
+                    <input type="text" class="url-link" id="link-generated" disabled></input>
+                </div>
             </div>
         </div>
         <script>
